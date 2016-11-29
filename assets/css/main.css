@@ -1,5 +1,5 @@
 @import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,700");
 
 /*
 	Eventually by HTML5 UP
@@ -294,7 +294,7 @@
 		color: rgba(255, 255, 255, 0.75);
 		font-family: "Roboto", sans-serif;
 		font-size: 16pt;
-		font-weight: 400;
+		font-weight: 300;
 		letter-spacing: -0.01em;
 		line-height: 1.65em;
 	}
@@ -381,8 +381,8 @@
 		}
 
 	h1 {
-		font-family: 'The Airlines';
-		font-size: 5em;
+		font-family: 'Hawk & Hunter';
+		font-size: 3em;
 		line-height: 1.25em;
 	}
 
@@ -1015,11 +1015,15 @@
 	}
 
 	#header h1 {
-		font-size: 6em;
 		margin: 0.2em 0 0 0;
+		padding-bottom: 0.25em;
+		font-size: 4em;
+		line-height: 1em;
+		letter-spacing: -0.05em;
 	}
 
 	#header p {
+		width: 30em;
 		font-size: 1.35em;
 		line-height: 1.65em;
 	}
@@ -1031,8 +1035,7 @@
 	@media screen and (max-width: 736px) {
 
 		#header h1 {
-			font-size: 5em;
-			display: none;
+			font-size: 3em;
 		}
 
 		#header p {
@@ -1049,6 +1052,11 @@
 
 		#header {
 			margin: 0 0 1em 0;
+			margin-bottom: 0em;
+		}
+
+		#header p {
+			width: 100%;
 		}
 
 	}
@@ -1115,9 +1123,9 @@
 		-webkit-transition: opacity 0.5s ease-in-out;
 		-ms-transition: opacity 0.5s ease-in-out;
 		transition: opacity 0.5s ease-in-out;
+		left: 4em;
 		bottom: 4em;
 		color: rgba(255, 255, 255, 0.5);
-		left: 4em;
 		opacity: 0.5;
 		position: absolute;
 	}
@@ -1163,6 +1171,7 @@
 			#footer {
 				bottom: 3.5em;
 				left: 3.5em;
+				position: absolute;
 			}
 
 		}
@@ -1176,22 +1185,13 @@
 
 		}
 
-		@media screen and (max-width: 360px) {
-
-			#footer {
-				bottom: 1.25em;
-				left: 1.25em;
-			}
-
-		}
-
-		@media screen and (max-height: 640px) {
+		@media screen and (max-width: 480px) {
 
 			#footer {
 				bottom: auto;
 				left: auto;
-				margin: 1em 0 0 0;
-				position: relative;
+				top: auto;
+				display: none;
 			}
 
 		}

@@ -1,0 +1,109 @@
+html,
+body,
+div,
+h1,
+p,
+a,
+video {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Oxygen", sans-serif;
+}
+
+.content {
+    display: table;
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+    z-index: 2;
+}
+
+	.content a {
+		color: #fff;
+		font-weight: 400;
+		border-bottom: 4px #fff solid;
+		text-decoration: none;
+	}
+
+		.content a:hover {
+			border-bottom: 4px #CD3333 solid;
+		}
+
+.content .cell-box {
+	display: table-cell;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.content-heading {
+	display: block;
+	background: url('../../img/bdc-grey-640.png') no-repeat center;
+    color: #ffff00;
+    font-family: 'Archivo Black';
+    font-size: 7em;
+    text-transform: uppercase;
+    line-height: 0.9em;
+}
+
+.content-description {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+    color: #fff;
+    font-family: 'Oswald';
+    font-weight: 300;
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center;
+	z-index: 3;
+}
+
+.video {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    transform: translate (50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+}
+
+#white h1 {
+	margin: 0.5em auto;
+	font-family: 'Oswald';
+	font-weight: 400;
+	font-size: 3.5em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#white p {
+	width: 50%;
+	margin: 0.8em auto;
+	font-family: 'Cutive Mono';
+	font-size: 1em;
+	color: #202020;
+	text-align: justify;
+	text-align-last: left;
+}
+
+#white p a {
+	color: #202020;
+	text-decoration: none;
+	border-bottom: 1px #CD3333 solid;
+}

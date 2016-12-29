@@ -10,26 +10,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Open+Sans:300,700" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/about.css" />
-
-</head>
-
-<body>
-<!-- https://envato.com/blog/video-background-html5-video/ -->
-
-<div class="content">
-    <div class="cell-box"><div>
-		<h1 class="content-heading"><img src="../img/atrf-white-500-web.png"></h1>
-    </div></div>
-</div>
-<div class="content">
-	<div class="cell-box"><div><div class="content-description"><a href="intro">The Intro</a>&nbsp;&nbsp;/&nbsp;&nbsp;<a href="">The Campaign</a></div></div></div>
-	</div>
-
-<video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="">
-  <source src="../img/vid/atrf-ac-vid.mp4" type="video/mp4">
-  <source src="../img/vid/atrf-ac-vid.webm" type="video/webm">
-</video><!-- /video -->
-
+	
 <script>
 (function() {
     /**
@@ -46,6 +27,40 @@
     });
 })();
 </script>
+	
+</head>
+
+<body>
+<!-- HTML5 VIDEO GUIDE: https://envato.com/blog/video-background-html5-video/ -->
+
+<div id="content">
+    <div class="cell-box"><div>
+		<div class="content-heading">
+			<a href="#description"><img src="../img/atrf-white-500-web.png" onmouseover="this.src='../img/atrf-white-red-500-web.png'" onmouseout="this.src='../img/atrf-white-500-web.png'"></a>
+		</div>
+    </div></div>
+</div>
+	
+<div id="content"><a name="description">
+	<div class="cell-box"><div>
+		<div class="content-description">
+			<p>Following the Raven</p>
+		</div>
+	</div></div>
+</a></div>
+
+<div id="content"><a name="links">
+	<div class="cell-box"><div>
+		<div class="content-links">
+			<h1><a href="https://notes.chairsandtables.org/following-the-raven-553c67c23c50">Following the Raven</a></h1>
+		</div>
+	</div></div>
+</a></div>
+
+<video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="">
+  <source src="../img/vid/atrf-ac-vid.mp4" type="video/mp4">
+  <source src="../img/vid/atrf-ac-vid.webm" type="video/webm">
+</video><!-- /video -->
 
 </body>
 

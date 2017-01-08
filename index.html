@@ -1,53 +1,71 @@
-<!DOCTYPE HTML>
-<!--
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>ATRF by CHAT</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/fonts/stylesheet.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body>
 
-		<!-- Header -->
-			<header id="header">
-				<img src="images/ATRF-raven-white-250-web.png">
-				<h1>As the Raven Flies</h1>
-				<p>Bicycle tour spanning all three oceans to document and investigate&nbsp; Canada&rsquo;s 
-				150th anniversary. Brought to you by <a href="http://chairsandtables.org">Chairs and Tables</a>.</p>
-			</header>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 
-		<!-- Signup Form -->
-			<form id="signup-form" method="post" action="#">
-				<input type="email" name="email" id="email" placeholder="Email Address" />
-				<input type="submit" value="Sign Up" />
-			</form>
+<head>
 
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="http://facebook.com/chairsandtablesorg" target="_blank" class="icon fa-facebook-square"><span class="label">Facebook</span></a></li>
-					<li><a href="http://twitter.com/chaisesettables" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="http://instagram.com/chaisesettables" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-					<!--<li><a href="https://github.com/chairsandtables/chairsandtables.github.io" class="icon fa-github"><span class="label">GitHub</span></a></li> -->
-					<li><a href="mailto:ac@chairsandtables.org" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; CHAT</li>
-				</ul>
-			</footer>
+<title>As the Raven Flies - About</title>
+<meta name="description" content="">
+<meta property="og:image" content="http://astheravenfli.es/img/vid/atrf-ac-vid-thumb.jpg" />
 
-		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Open+Sans:300,700" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/about.css" />
 
-	</body>
+<!-- VIDEO SCRIPT -->
+<script>
+(function() {
+    var video = document.getElementById("my-video");
+	
+    video.addEventListener( "canplay", function() {
+    video.play();
+    });
+})();
+</script>
+	
+</head>
+
+<body>
+	
+<!-- HTML5 VIDEO GUIDE: https://envato.com/blog/video-background-html5-video/ -->
+
+<!-- LOGO -->
+
+	<div id="content">
+		<div class="cell-box"><div>
+			<div class="content-heading">
+				<a href="#description"><img src="../img/atrf-white-500-web.png" onmouseover="this.src='../img/atrf-white-red-overlay-500-web.png'" onmouseout="this.src='../img/atrf-white-500-web.png'"></a>
+			</div>
+		</div></div>
+	</div>
+	
+<!-- DESCRIPTION -->
+	
+	<div id="content"><a name="description">
+		<div class="cell-box"><div>
+			<div class="content-description">
+				<p>In 2017, we are cycling 15,000 km across Canada to all three oceans to research and document the country 150 years since its confederation.</p>
+				<p><a href="#links">Find Out More</a></p>
+			</div>
+		</div></div>
+	</a></div>
+	
+<!-- LINKS -->
+
+	<div id="content"><a name="links">
+		<div class="cell-box"><div>
+			<div class="content-links">
+				<h1><a href="https://notes.chairsandtables.org/following-the-raven-553c67c23c50" target="blank">Following the Raven &rarr;</a></h1>
+			</div>
+		</div></div>
+	</a></div>
+
+<!-- VIDEO BACKGROUND -->
+	
+	<video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="">
+	  <source src="../img/vid/atrf-ac-vid.mp4" type="video/mp4">
+	  <source src="../img/vid/atrf-ac-vid.webm" type="video/webm">
+	</video><!-- /video -->
+
+</body>
+
 </html>

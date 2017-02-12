@@ -47,13 +47,37 @@
 		font-family: "Oxygen", sans-serif;
 	}
 
+#top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 2em;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0.75em 0.5 0 0.5;
+	background-color: #cd3333;
+	color: #ffffff;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	font-size: 1em;
+	text-align: center;
+	z-index: 10;
+	opacity: 0.85;
+}
+
+#top a {
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 1px #fff solid;
+}
+
 	#content {
 		display: table;
 		position: relative;
 		height: 100vh;
 		width: 100%;
 		margin: 0 auto;
-		background: url('../../img/black-small-checks.png') repeat fixed;
+		background: url('../../img/about/black-small-checks.png') repeat fixed;
 		overflow: hidden;
 		z-index: 2;
 	}
@@ -84,6 +108,7 @@
 		display: block;
 		width: 40em;
 		margin: 0 auto;
+		text-align: center;
 	}
 
 .content-description p {
@@ -122,7 +147,6 @@
 		text-align: center;
 		z-index: 3;
 	}
-
 		.content-links h1 a {
 				color: #fff;
 				font-weight: 400;
@@ -153,13 +177,15 @@
 		font-size: 3.5em;
 		text-transform: uppercase;
 		text-align: center;
+		color: #202020;
 	}
 
 	#white p {
 		width: 50%;
 		margin: 0.8em auto;
-		font-family: 'Cutive Mono';
+		font-family: 'Source Sans Pro';
 		font-size: 1em;
+		font-weight: 300;
 		color: #202020;
 		text-align: justify;
 		text-align-last: left;
@@ -169,4 +195,20 @@
 		color: #202020;
 		text-decoration: none;
 		border-bottom: 1px #CD3333 solid;
+	}
+
+		#white p a:hover {
+			border-bottom-color: #202020;
+		}
+
+	#eighty {
+		width: 80%;
+		margin: 2em auto 2em auto;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	#eighty img {
+		margin: 1em 1.5em;
+		vertical-align: middle;
 	}

@@ -39,9 +39,9 @@
 		background: transparent;
 	}
 
-	::-webkit-scrollbar-thumb {
+	/* ::-webkit-scrollbar-thumb {
 		background: #CD3333;
-	}
+	} */
 
 	body {
 		font-family: "Oxygen", sans-serif;

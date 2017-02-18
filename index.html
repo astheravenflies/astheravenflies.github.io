@@ -1,75 +1,85 @@
+<!DOCTYPE html>
 <html>
-
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
-
 <head>
+    <title>As The Raven Flies</title>
+    <meta charset='utf-8' />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 
-<title>As the Raven Flies - About</title>
-<meta name="description" content="">
-<meta property="og:image" content="http://astheravenfli.es/img/atrf/vid/atrf-ac-vid-thumb.jpg" />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; z-index:1}
+    </style>
 
-<link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Open+Sans:300,700" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/about.css" />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />    
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 
-<!-- VIDEO SCRIPT -->
-<script>
-(function() {
-    var video = document.getElementById("my-video");
-	
-    video.addEventListener( "canplay", function() {
-    video.play();
-    });
-})();
-</script>
-	
+    <link rel="stylesheet" href="assets/css/about.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Open+Sans:300,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../../assets/css/about.css" />
+    
 </head>
 
+
 <body>
-	
-<!-- HTML5 VIDEO GUIDE: https://envato.com/blog/video-background-html5-video/ -->
-	
-<!-- BANNER -->
-	
-<div id="top">Currently crowdfunding for this cross-Canada cycle expedition. <a href="https://www.kickstarter.com/projects/asadch/as-the-raven-flies-cross-canada-cycle-tour?ref=2i2uyj" target="blank">Chip in whatever you can.</a></div>
-	
-<!-- LOGO -->
 
-	<div id="content">
-		<div class="cell-box"><div>
-			<div class="content-heading">
-				<a href="#description"><img src="../img/about/atrf-white-500-web.png" onmouseover="this.src='../img/about/atrf-white-red-overlay-500-web.png'" onmouseout="this.src='../img/about/atrf-white-500-web.png'"></a>
-			</div>
-		</div></div>
-	</div>
-	
-<!-- DESCRIPTION -->
-	
-	<div id="content"><a name="description">
-		<div class="cell-box"><div>
-			<div class="content-description">
-				<p>In 2017, we are cycling 15,000 km across Canada to all three oceans to research and document the country 150 years since its confederation.</p>
-				<p><a href="#links">Story</a> / <a href="/team">Team</a> / <a href="/supporters">Supporters</a></p>
-			</div>
-		</div></div>
-	</a></div>
-	
-<!-- LINKS -->
-	
-	<div id="content"><a name="links">
-		<div class="cell-box"><div>
-			<div class="content-links">
-				<h1><a href="https://notes.chairsandtables.org/following-the-raven-553c67c23c50" target="blank">Following the Raven &rarr;</a></h1>
-			</div>
-		</div></div>
-	</a></div>
+    <!-- TOP -->
 
-<!-- VIDEO BACKGROUND -->
-	
-	<video id="my-video" class="video" autoplay="autoplay" loop="loop" muted="">
-	  <source src="../img/vid/atrf-ac-vid.mp4" type="video/mp4">
-	  <source src="../img/vid/atrf-ac-vid.webm" type="video/webm">
-	</video><!-- /video -->
+    <div id="top-relative">Currently crowdfunding for this cross-Canada cycle expedition. <a href="https://www.kickstarter.com/projects/asadch/as-the-raven-flies-cross-canada-cycle-tour?ref=2i2uyj" target="blank">Chip in what you can!</a></div>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar navbar-toggleable-sm">
+        <div class="container">
+            <ul class="nav navbar-nav navbar-left text-left">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="../about">About</a>
+                    <ul class="dropdown-menu">
+                        <a class="nav-link" href="../team">Team</a>
+                        <a class="nav-link" href="../partners">Partners</a>
+                        <a class="nav-link" href="../supporters">Supporters</a>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="../journal">Journal</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav-logo mx-auto">
+                <li class="nav item"><a class="nav-link" href="../"><img src="../img/nav/atrf-logo-100-web.png"></a></li>
+            </ul>
+            
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="../media">Media</a>
+                    <ul class="dropdown-menu">
+                        <a class="nav-link" href="../press-kit">Press Kit</a>
+                    </ul>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        
+        </div>
+    </nav>
+
+    <div id="map">
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhZGNoIiwiYSI6Ikw0TTRNTjgifQ.iOyNBAGQZntQ8yDmUnfxQQ';
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/asadch/cizbdaovy007e2so5wxgl720y', //stylesheet location
+        center: [-100.469, 64], // starting position
+        zoom: 2.9 // starting zoom
+
+    });
+    </script>
+    </div>
 
 </body>
-
 </html>

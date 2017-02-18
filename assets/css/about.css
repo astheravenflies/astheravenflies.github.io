@@ -59,6 +59,7 @@
 		font-family: "Oswald";
 		font-size: 1.2em;
 		text-transform: uppercase;
+		z-index:20;
 	}
 
 		.navbar ul {

@@ -44,8 +44,129 @@
 	} */
 
 	body {
-		font-family: "Oxygen", sans-serif;
+		font-family: "Open Sans";
 	}
+
+/* NAVIGATION */
+
+	.navbar {
+		top: 0;
+		left: 0;
+		height: 8.25em;
+		width: 100%;
+		margin: 0 auto;
+		background-color: #ffffff;
+		font-family: "Oswald";
+		font-size: 1.2em;
+		text-transform: uppercase;
+	}
+
+		.navbar ul {
+			height: 100%;
+			vertical-align: middle;
+		}
+
+			.navbar ul.navbar-nav {
+				height: 2em;
+			}
+
+				ul.navbar-nav li.dropdown {
+					line-height: 2em;
+				}
+
+				ul.navbar-nav .dropdown-toggle:after {
+					display:none;
+				}
+
+				ul.navbar-nav li.dropdown:hover ul.dropdown-menu {
+					display: block;
+				}
+
+				ul.dropdown-menu {
+					border: none;
+					margin: 0;
+					padding: 0;
+				}
+
+					ul.dropdown-menu a.nav-link {
+						width: 100%;
+						margin: 0 0.6em;
+						padding: 0;
+						font-size: 1.2em;
+						text-align: left;
+					}
+
+			.navbar ul.navbar-right {
+				position: relative;
+				left: -25%;
+			}
+
+			.navbar ul.navbar-left {
+				position: relative;
+				right: -25%;
+			}
+
+			.navbar ul li {
+				display: inline;
+				padding: 0 1em;
+				color: #e0e0e0;
+				height: 100%;
+			}
+
+				.navbar ul li a {
+					color: #202020;
+					text-decoration: none;
+				}
+
+					.navbar ul li a:hover {
+						color: #cd3333;
+						text-decoration: none;
+}
+
+/* FONT AWESOME */
+
+	ul.icons li {
+		display: inline;
+		padding: 0 0.2em;
+	}
+
+		ul.icons li a { 
+		color: #202020;
+			text-decoration: none;
+		}
+
+			ul.icons li a:hover {
+				color: #cd3333;
+			}
+
+	.icon {
+		text-decoration: none;
+		border-bottom: none;
+		position: relative;
+	}
+
+		.icon:before {
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.icon > .label {
+			display: none;
+		}
+
+label {
+		color: #fff;
+		display: block;
+		font-size: 0.9em;
+		font-weight: 700;
+		margin: 0 0 1em 0;
+	}
+
+/* BANNER */
 
 	#top {
 		position: fixed;
@@ -75,7 +196,7 @@
 			position: relative;
 			top: 0;
 			left: 0;
-			height: 2em;
+			height: 2.5em;
 			width: 100%;
 			margin: 0 auto;
 			padding: 0.75em 0.5 0 0.5;
@@ -93,6 +214,8 @@
 				text-decoration: none;
 				border-bottom: 1px #fff solid;
 			}
+
+/* CONTENT */
 
 	#content {
 		display: table;
@@ -197,6 +320,8 @@
 		height: 1em;
 	}
 
+/* PAGE */
+
 	#white {
 		position: relative;
 		margin: 3em auto;
@@ -232,6 +357,7 @@
 			font-family: 'Source Sans Pro';
 			font-size: 1em;
 			font-weight: 300;
+			line-height: 1.15em;
 			color: #202020;
 			text-align: justify;
 			text-align-last: left;
@@ -278,6 +404,10 @@
 		width: 50%;
 		margin: 0 auto;
 	}
+
+		.fifty img {
+			margin: 0.5em 1em 0.5em 0;
+		}
 
 	.eighty {
 		width: 80%;

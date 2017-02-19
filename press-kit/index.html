@@ -51,7 +51,7 @@
                     </ul>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="../contact">Contact</a>
                 </li>
             </ul>
         
@@ -69,7 +69,7 @@
 		<p>For more information please <a href="../img/press-kit/atrf-press-release.pdf" target="blank">click here</a> to open a PDF of our press release.</p>
 		<h2>Images</h2>
 		<p>When writing about ATRF, please use the following logos (click to download), which have been processed for web publishing.</p>
-		<a href="../img/press-kit/atrf-logo-280-web.png" download><img src="../img/press-kit/atrf-logo-280-web.png"></a> <a href="../img/press-kit/atrf-logo-200-web.png"><img src="../img/press-kit/atrf-logo-200-web.png"></a>
+		<a href="../img/press-kit/atrf-logo-280-web.png" download><img src="../img/press-kit/atrf-logo-280-web.png"></a> <a href="../img/press-kit/atrf-logo-200-web.png" download><img src="../img/press-kit/atrf-logo-200-web.png"></a>
 		<a href="..img/press-kit/atrf-map-800-web" download><img src="../img/press-kit/atrf-map-800-web.png" width="100%"></a>
 		<p>Because the expedition hasn&rsquo;t yet begun, we don&rsquo;t have photos directly associated with ATRF. The following images (click to download) are from Asad&rsquo;s cycle tour on the Pacific coast in 2014. Please attribute images to <a href="http://chairsandtables.org" target="blank">Chairs and Tables</a>.</p>
 		<p>Email <a href="mailto:jcr@chairsandtables.org">jcr@chairsandtables.org</a> if you&rsquo;d like higher resolution or different images.</p>
@@ -85,6 +85,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<!-- FIX DROPDOWN CLICK --><script>$('.dropdown-toggle').click(function() {
+    var location = $(this).attr('href');
+    window.location.href = location;
+    return false;});</script>
 	
 </body>
 

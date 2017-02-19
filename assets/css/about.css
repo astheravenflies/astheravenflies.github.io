@@ -153,7 +153,6 @@
 					background-color: #ffffff;
 				}
 
-
 			ul.white-bg {
 				height: 2em;
 				padding-top: -100px;
@@ -180,6 +179,35 @@
 						color: #cd3333;
 						text-decoration: none;
 }
+
+/* MAP OVERLAY */
+
+#about-box {
+	display: block;
+	position: fixed;
+	right: 1em;
+	bottom: 2em;
+	height: 2em;
+	padding: 0.5em;
+	background-color: #ffffff;
+	border-radius: 5px;
+	z-index: 100;
+}
+
+	#about-box p {
+		font-family: 'Oswald';
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+
+		#about-box p a {
+			color: #202020;
+			text-decoration: none;
+		}
+
+			#about-box p a:hover {
+				color: #cd3333;
+			}
 
 /* FONT AWESOME */
 

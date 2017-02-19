@@ -389,11 +389,11 @@ label {
 
 	#white {
 		position: relative;
-		margin: 3em auto;
+		margin: 0 auto 3em auto;
 	}
 
 		#white h1 {
-			margin: 0.5em auto;
+			margin: 0.35em auto 1em auto;
 			font-family: 'Oswald';
 			font-weight: 400;
 			font-size: 3.5em;

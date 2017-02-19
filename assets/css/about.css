@@ -55,7 +55,6 @@
 		height: 8.25em;
 		width: 100%;
 		margin: 0 auto;
-		background-color: #ffffff;
 		font-family: "Oswald";
 		font-size: 1.2em;
 		text-transform: uppercase;
@@ -100,12 +99,69 @@
 			.navbar ul.navbar-right {
 				position: relative;
 				left: -25%;
+				background-color: #ffffff;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
 			}
+
+				.navbar ul.navbar-right li.dropdown:hover {
+					background-color: #ffffff;
+					border-top-left-radius: 5px;
+					border-bottom-left-radius: 0px;
+				}
+				.navbar ul.navbar-right li.dropdown ul.dropdown-menu {
+					height: 2.7em;
+					border-top-left-radius: 0px;
+					border-top-right-radius: 0px;
+				}
+				.navbar ul.navbar-right li.dropdown ul.light {
+					background-color: #ffffff;
+				}
+
+				.navbar ul.navbar-right li.dropdown ul.light > li {
+					margin: 0;
+					padding: 0;
+					background-color: #ffffff;
+				}
 
 			.navbar ul.navbar-left {
 				position: relative;
 				right: -25%;
+				background-color: #ffffff;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
 			}
+
+				.navbar ul.navbar-left li.dropdown:hover {
+					background-color: #ffffff;
+					border-top-left-radius: 5px;
+					border-bottom-left-radius: 0px;
+				}
+				.navbar ul.navbar-left li.dropdown ul.dropdown-menu {
+					height: 7.5em;
+					border-top-left-radius: 0px;
+					border-top-right-radius: 0px;
+				}
+				.navbar ul.navbar-left li.dropdown ul.light {
+					background-color: #ffffff;
+				}
+
+				.navbar ul.navbar-left li.dropdown ul.light > li {
+					margin: 0;
+					padding: 0;
+					background-color: #ffffff;
+				}
+
+
+			ul.white-bg {
+				height: 2em;
+				padding-top: -100px;
+				background-color: #ffffff;
+			}
+
+				ul.white-bg img {
+					margin-top: -45px;
+				}
 
 			.navbar ul li {
 				display: inline;
@@ -195,9 +251,9 @@ label {
 
 		#top-relative {
 			position: relative;
-			top: 0;
+			top: 0px;
 			left: 0;
-			height: 2em;
+			height: 2.7em;
 			width: 100%;
 			margin: 0 auto;
 			padding: 0.75em 0.5 0 0.5;
@@ -207,8 +263,16 @@ label {
 			font-weight: 300;
 			font-size: 1em;
 			text-align: center;
+			vertical-align: middle;
 			z-index: 10;
 		}
+
+			#top-relative p {
+				padding: 0;
+				margin: 0;
+				height: 2.7em;
+				line-height: 2.5em;
+			}
 
 			#top-relative a {
 				color: #fff;
@@ -379,6 +443,7 @@ label {
 		position: absolute;
 		width: 45%;
 		right: 51%;
+		margin: 0 auto 6em;
 		overflow: hidden;
 	}
 
@@ -387,6 +452,7 @@ label {
 		position: absolute;
 		width: 45%;
 		left: 51%;
+		margin: 0 auto 3em;
 		overflow: hidden;
 	}
 

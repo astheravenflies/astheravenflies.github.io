@@ -100,7 +100,7 @@
 
 			.navbar ul.navbar-right {
 				position: relative;
-				left: -25%;
+				left: -20%;
 				border-top-right-radius: 5px;
 				border-bottom-right-radius: 5px;
 			}
@@ -124,7 +124,7 @@
 
 			.navbar ul.navbar-left {
 				position: relative;
-				right: -25%;
+				right: -20%;
 				border-top-left-radius: 5px;
 				border-bottom-left-radius: 5px;
 			}

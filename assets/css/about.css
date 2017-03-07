@@ -809,9 +809,11 @@ ul.center {
 	}
 
 	.hundred {
+		position: relative;
 		width: 100%;
-		margin: 0 auto;
-		background-color: #000000;
+		margin: 1em auto;
+		background-color: #ffffff;
+		text-align: center;
 	}
 
 	.hundred-relative {
@@ -832,16 +834,16 @@ ul.center {
 			width: 100% !important;
 		}
 
-	.eighty {
+	.ninety {
 		position: relative;
-		width: 80%;
+		width: 90%;
 		margin: 2em auto;
 		vertical-align: middle;
 		text-align: center;
 	}
 
-		.eighty img {
-			margin: 1em 1.5em;
+		.ninety img {
+			margin: 0;
 			vertical-align: middle;
 		}
 

@@ -493,11 +493,13 @@ ul.center {
 			}
 	
 		#page h2 {
+			position: relative;
 			font-family: 'Oswald';
 			font-weight: 400;
 			font-size: 4em;
 			text-transform: uppercase;
 			color: #202020;
+			z-index: 10;
 		}
 
 		#page h2.sixty {
@@ -511,6 +513,10 @@ ul.center {
 
 		#page h2.margin-05 {
 			margin: 0em auto 0.5em auto;
+		}
+
+		#page h2.margin-top-05 {
+			margin: 0.5em auto;
 		}
 
 			#page h2.large {
@@ -553,6 +559,10 @@ ul.center {
 				text-decoration: none;
 			}
 
+				#page h2 a:hover {
+					border-bottom: 7px solid;
+				}
+
 				#page h2 a.white {
 					color: #ffffff;
 				}
@@ -560,6 +570,15 @@ ul.center {
 					#page h2 a.white:hover {
 						color: #ffffff;
 						border-bottom: 7px solid #ffffff;
+					}
+
+				#page h2 a.black {
+					color: #202020;
+				}
+
+					#page h2 a.black:hover {
+						color: #202020;
+						border-bottom-color: #202020;
 					}
 
 				#page h2 a.kick-green {
@@ -570,6 +589,31 @@ ul.center {
 						color: #122906;
 						border-bottom: 7px solid #122906;
 					}
+
+		#page h3 {
+			position: relative;
+			font-family: 'Oswald';
+			font-weight: 400;
+			font-size: 2em;
+			text-transform: uppercase;
+			color: #202020;
+			z-index: 10;
+		}
+
+			#page h3.sixty {
+				width: 60%;
+			}
+
+		#page h3.symbol {
+			position: relative;
+			height: 1em;
+			margin: 0 0 -.8em 0;
+			padding: 0 25% 0 0;
+			font-size: 8em;
+			color: #ffffff;
+			text-align-last: center;
+			z-index: 1;
+		}
 
 		#page p {
 			position: relative;
@@ -582,6 +626,7 @@ ul.center {
 			color: #202020;
 			text-align: justify;
 			text-align-last: left;
+			z-index: 10;
 		}
 
 			#page p.margin-3 {
@@ -636,6 +681,44 @@ ul.center {
 					#page p a.blue-black:hover {
 						border-bottom-color: #202020;
 					}
+
+		#page blockquote {
+			width: 70%;
+			margin: 3em auto;
+		}
+
+			#page blockquote.margin-5 {
+				width: 70%;
+				margin: 5em auto;
+			}
+
+			#page blockquote p {
+				width: 100%;
+				font-size: 1.5em;
+				font-style: italic;
+			}
+
+				#page blockquote p.source {
+					width: 100%;
+					font-style: normal;
+					text-align-last: right;
+				}
+
+		#page img.center {
+			display: block;
+			margin: 2em auto;
+			text-align: center;
+		}
+
+		#page .raven-bg {
+			position: fixed;
+			width: 60%;
+			height: 215px;
+			right: -16%;
+			background: url(../../img/about/raven-white-200-web.png) center no-repeat;
+			text-align-last: center;
+			z-index: 1;
+		}
 
 		#page .bg {
 		}

@@ -352,7 +352,7 @@ ul.center {
 			text-transform: uppercase;
 			line-height: 1.2em;
 			text-align: justify;
-			text-align-last: center!important;
+			text-align-last: center;
 			border-width: 0;
 			z-index: 3;
 		}
@@ -612,6 +612,7 @@ ul.center {
 			padding: 0 25% 0 0;
 			font-size: 8em;
 			color: #ffffff;
+			text-align: center;
 			text-align-last: center;
 			z-index: 1;
 		}

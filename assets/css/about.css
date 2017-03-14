@@ -340,6 +340,7 @@ ul.center {
 		width: 40em;
 		margin: 0 auto;
 		text-align: center;
+		text-align-last: center;
 	}
 
 		.content-description p {

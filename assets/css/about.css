@@ -608,12 +608,14 @@ ul.center {
 		#page h3.symbol {
 			position: relative;
 			height: 1em;
-			margin: 0 0 -.8em 0;
-			padding: 0 25% 0 0;
-			font-size: 8em;
+			margin: 0 0 0.15em 0;
+			padding: 0 0 0 0;
+			font-size: 7em;
 			color: #ffffff;
+			vertical-align: bottom;
 			text-align: center;
 			text-align-last: center;
+			transition: 0.2s ease-out;
 			z-index: 1;
 		}
 
@@ -837,13 +839,6 @@ ul.center {
 					margin: -2.25em auto;
 				}
 
-			#page .team-desc {
-				position: relative;
-				width: 100%;
-				margin: -2em auto -1em auto;
-				z-index: 12;
-			}
-
 			#page .bg.red {
 				background-color: #cd3333;
 			}
@@ -870,6 +865,77 @@ ul.center {
 		}
 
 			#page .bg-content p {
+			}
+
+	#page .team-desc {
+		position: relative;
+		width: 100%;
+		margin: -2em auto -1em auto;
+		z-index: 12;
+	}
+
+#page .gear-list {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-flex-wrap: wrap;
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+			-moz-justify-content: center;
+			-webkit-justify-content: center;
+			-ms-justify-content: center;
+			justify-content: center;
+			list-style: none;
+			width:80%;
+			margin: 0 auto;
+			padding: 0;
+		}
+
+
+			#page .gear-list li.gear {
+				display: inline-block;
+				width: 50%;
+				margin: 0 auto;
+				padding: 1em;
+				box-sizing:border-box;
+				position: relative;
+				text-align: left;
+			}
+
+#page .gear-list ul.fa-ul {
+	width: 80%;
+	margin: 1em auto;
+}
+
+#page .gear-list ul.fa-ul li {
+	width: 100%;
+	padding-left: 0.75em;
+	line-height: 1.2em;
+}
+
+#page .gear-list ul.fa-ul li::before {
+	position: absolute;
+	left: 0;
+	font-family: FontAwesome;
+	content: "\f0da\00a0";
+}
+
+#page .gear-list li:hover h3.symbol {
+	color: #202020;
+}
+			#page .gear-list h3 {
+				width: 100%;
+				padding: 0;
+				text-align: center;
+			}
+
+			#page .gear-list p {
+				width: 80%;
+				margin: 0 auto;
+				padding: 0.5em 0;
+				text-align: left;
 			}
 
 	#page .absolute-content {

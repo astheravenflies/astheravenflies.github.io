@@ -633,8 +633,16 @@ ul.center {
 			z-index: 10;
 		}
 
-			#page p.margin-3 {
+			#page p.margin-bottom-3 {
 				margin: 0 auto 3em auto;
+			}
+
+			#page p.margin-bottom-4 {
+				margin: 0 auto 4em auto;
+			}
+
+			#page p.margin-bottom-5 {
+				margin: 0 auto 5em auto;
 			}
 
 			#page p.white {
@@ -874,70 +882,77 @@ ul.center {
 		z-index: 12;
 	}
 
-#page .gear-list {
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			-moz-flex-wrap: wrap;
-			-webkit-flex-wrap: wrap;
-			-ms-flex-wrap: wrap;
-			flex-wrap: wrap;
-			-moz-justify-content: center;
-			-webkit-justify-content: center;
-			-ms-justify-content: center;
-			justify-content: center;
-			list-style: none;
-			width:80%;
+	#page .gear-list {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: wrap;
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		list-style: none;
+		width:80%;
+		margin: 0 auto;
+		padding: 0;
+	}
+
+
+		#page .gear-list li.gear {
+			display: inline-block;
+			width: 50%;
 			margin: 0 auto;
-			padding: 0;
+			padding: 1em;
+			box-sizing:border-box;
+			position: relative;
+			text-align: left;
 		}
 
+		#page .gear-list ul.fa-ul {
+			width: 80%;
+			margin: 1em auto;
+		}
 
-			#page .gear-list li.gear {
-				display: inline-block;
-				width: 50%;
-				margin: 0 auto;
-				padding: 1em;
-				box-sizing:border-box;
-				position: relative;
-				text-align: left;
-			}
-
-#page .gear-list ul.fa-ul {
-	width: 80%;
-	margin: 1em auto;
-}
-
-#page .gear-list ul.fa-ul li {
-	width: 100%;
-	padding-left: 0.75em;
-	line-height: 1.2em;
-}
-
-#page .gear-list ul.fa-ul li::before {
-	position: absolute;
-	left: 0;
-	font-family: FontAwesome;
-	content: "\f0da\00a0";
-}
-
-#page .gear-list li:hover h3.symbol {
-	color: #202020;
-}
-			#page .gear-list h3 {
+			#page .gear-list ul.fa-ul li {
 				width: 100%;
-				padding: 0;
-				text-align: center;
+				padding-left: 0.75em;
+				line-height: 1.2em;
 			}
 
-			#page .gear-list p {
-				width: 80%;
-				margin: 0 auto;
-				padding: 0.5em 0;
-				font-weight: 300;
-				text-align: left;
+			#page .gear-list ul.fa-ul li::before {
+				position: absolute;
+				left: 0;
+				font-family: FontAwesome;
+				content: "\f0da\00a0";
 			}
+
+		#page .gear-list li:hover h3.symbol {
+			color: #202020;
+		}
+
+		#page .gear-list h3 {
+			width: 100%;
+			padding: 0;
+			text-align: center;
+		}
+
+		#page .gear-list p {
+			width: 80%;
+			margin: 0 auto;
+			padding: 0.5em 0;
+			font-weight: 300;
+			text-align: left;
+		}
+
+#page form.paypal-form {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
 
 	#page .absolute-content {
 		display: block;

@@ -350,7 +350,7 @@ ul.center {
 			font-weight: 300;
 			font-size: 2em;
 			text-transform: uppercase;
-			line-height: 1.2em;
+			line-height: 1.2;
 			text-align: center;
 			text-align-last: center;
 			border-width: 0;
@@ -626,7 +626,7 @@ ul.center {
 			font-family: 'Source Sans Pro';
 			font-size: 1.15em;
 			font-weight: 300;
-			line-height: 1.2em;
+			line-height: 1.2;
 			color: #202020;
 			text-align: justify;
 			text-align-last: left;
@@ -696,7 +696,7 @@ ul.center {
 
 		#page blockquote {
 			width: 70%;
-			margin: 1em auto;
+			margin: 2em auto;
 		}
 
 			#page blockquote.margin-5 {
@@ -920,7 +920,7 @@ ul.center {
 			#page .gear-list ul.fa-ul li {
 				width: 100%;
 				padding-left: 0.75em;
-				line-height: 1.2em;
+				line-height: 1.2;
 			}
 
 			#page .gear-list ul.fa-ul li::before {
@@ -945,7 +945,7 @@ ul.center {
 			margin: 0 auto;
 			padding: 0.5em 0;
 			font-weight: 300;
-			text-align: left;
+			text-align: left;			
 		}
 
 #page form.paypal-form {

@@ -1369,7 +1369,7 @@ label {
 			display: block;
 			width: 80%;
 			margin: 0 auto;
-			padding: 0.3em;
+			padding: 0.3em 0;
 		}
 
 		#footer #mc_embed_signup .button {

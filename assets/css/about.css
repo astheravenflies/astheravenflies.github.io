@@ -184,9 +184,9 @@ a {
 	display: block;
 	position: relative;
 	left: 0;
-	bottom: 0;
+	bottom: 5em;
 	width: 100%;
-	margin: 7em auto 5em auto;
+	margin: 12em auto 0 auto;
 	padding-bottom: 5em;
 	z-index: 10;
 	vertical-align: middle;

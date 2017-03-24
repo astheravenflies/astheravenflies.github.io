@@ -404,7 +404,6 @@ label {
 		font-weight: 300;
 		font-size: 2em;
 		text-transform: uppercase;
-		-webkit-font-smoothing: antialiased;
 		line-height: 1.2;
 		text-align: center;
 		text-align-last: center;

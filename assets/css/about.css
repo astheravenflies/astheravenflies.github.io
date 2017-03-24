@@ -966,24 +966,28 @@ label {
 		text-align: left;
 	}
 
-	#page .gear-list ul.fa-ul {
+	#page ul.fa-ul {
 		width: 80%;
 		margin: 1em auto;
 	}
 
-		#page .gear-list ul.fa-ul li {
+		#page ul.fa-ul li {
 			width: 100%;
 			padding-left: 0.75em;
 			font-size: 1em;
 			line-height: 1.4;
 		}
 
-		#page .gear-list ul.fa-ul li::before {
+		#page ul.fa-ul li::before {
 			position: absolute;
 			left: 0;
 			font-family: FontAwesome;
 			content: "\f0da\00a0";
 		}
+
+#page ul.sixty {
+	width: 60%;
+}
 
 	#page .gear-list li:hover h3.symbol {
 		color: #202020;

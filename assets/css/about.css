@@ -955,7 +955,6 @@ label {
 	padding: 0;
 }
 
-
 	#page .gear-list li.gear {
 		display: inline-block;
 		width: 50%;
@@ -965,6 +964,24 @@ label {
 		position: relative;
 		text-align: left;
 	}
+
+#page ul.backers {
+	width: 60%;
+	margin: 1em auto;
+	font-weight: 300;
+	line-height: 1.4;
+	text-align: justify;
+	text-align-last: left;
+}
+
+#page ul.backers li {
+	display: inline;
+	transition: 0.2s ease-out;
+}
+
+#page ul.backers li:hover {
+	color: #ffffff;
+}
 
 	#page ul.fa-ul {
 		width: 80%;

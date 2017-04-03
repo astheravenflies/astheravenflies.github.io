@@ -1297,9 +1297,10 @@ label {
 		font-size: 1em;
 		font-weight: 300;
 		color: #343434;
-		vertical-align: bottom;
+		vertical-align: top;
 		text-align: left;
 		text-align-last: left;
+		overflow: hidden;
 	}
 
 	#footer #mc_embed_signup label {

@@ -19,7 +19,8 @@
 	}
 
 	body {
-		line-height: 1;
+		font-size: 13pt;
+		line-height: 1.4;
 		-webkit-text-size-adjust: none;
 	}
 
@@ -74,6 +75,10 @@ a {
 			height: 2em;
 		}
 
+.navbar ul.navbar-nav li.nav-item {
+	position: relative;top: -0.2em;
+}
+
 			ul.navbar-nav li.dropdown {
 				line-height: 2em;
 			}
@@ -98,7 +103,7 @@ a {
 					width: 100%;
 					margin: 0 0.6em;
 					padding: 0;
-					font-size: 1.5em;
+					font-size: 1.66em;
 					text-align: left;
 				}
 
@@ -194,7 +199,7 @@ a {
 }
 
 #footer ul.links {
-	width: 100%;
+	width: 22em;
 	margin: 0 auto 0.75em auto;
 }
 
@@ -204,6 +209,11 @@ a {
 
 #footer ul.light {
 	font-weight: 300;
+	width: 25em;
+}
+
+#footer ul.light li {
+	margin: 0 1.3em;
 }
 
 #footer ul.links li {
@@ -215,14 +225,14 @@ a {
 	text-align-last: center;
 }
 
-#footer ul.links li a {
-	color: #202020;
-	text-decoration: none;
-}
+	#footer ul.links li a {
+		color: #202020;
+		text-decoration: none;
+	}
 
-#footer ul.links li a:hover {
-	color: #cd3333;
-}
+		#footer ul.links li a:hover {
+			color: #cd3333;
+		}
 
 /* MAP OVERLAY */
 
@@ -404,7 +414,7 @@ label {
 		font-weight: 300;
 		font-size: 2em;
 		text-transform: uppercase;
-		line-height: 1.2;
+		line-height: 1.25;
 		text-align: center;
 		text-align-last: center;
 		border-width: 0;
@@ -680,15 +690,19 @@ label {
 		font-family: 'Source Sans Pro';
 		font-size: 1.15em;
 		font-weight: 300;
-		line-height: 1.2;
+		line-height: 1.25;
 		color: #202020;
 		text-align: justify;
 		text-align-last: left;
 		z-index: 10;
 	}
 
+		#page p.margin-top-1 {
+			margin-top: 1em;
+		}
+
 		#page p.margin-bottom-3 {
-			margin: 0 auto 3em auto;
+			margin-bottom: 3em;
 		}
 
 		#page p.margin-bottom-4 {

@@ -674,7 +674,7 @@ label {
 		margin: 0 0 0.15em 0;
 		padding: 0 0 0 0;
 		font-size: 7em;
-		color: #ffffff;
+		color: #202020;
 		vertical-align: bottom;
 		text-align: center;
 		text-align-last: center;
@@ -1021,7 +1021,7 @@ label {
 }
 
 	#page .gear-list li:hover h3.symbol {
-		color: #202020;
+		color: #cd3333;
 	}
 
 	#page .gear-list h3 {

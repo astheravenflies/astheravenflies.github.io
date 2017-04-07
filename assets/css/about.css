@@ -696,6 +696,10 @@ label {
 		z-index: 10;
 	}
 
+#page p.ninety {
+	width: 90%;
+}
+
 		#page p.margin-top-1 {
 			margin-top: 1em;
 		}

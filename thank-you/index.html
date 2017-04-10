@@ -119,6 +119,11 @@
 var location = $(this).attr('href');
 window.location.href = location;
 return false;});</script>
+<!-- FIX FOOTER EMAIL BOX IN SAFARI -->
+<script type="text/javascript">if (navigator.userAgent.indexOf('Safari') != -1 && 
+navigator.userAgent.indexOf('Chrome') == -1) {
+	document.body.className += " safari";
+}</script>
 	
 </body>
 

@@ -1319,7 +1319,7 @@ label {
 		text-align-last: left;
 	}
 
-	.safari input.email {
+	.safari #footer #mc_embed_signup input.email {
 		padding-top: 0.4em;
 	}
 

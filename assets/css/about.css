@@ -1004,6 +1004,7 @@ label {
 
 	#page .gear-list li.gear {
 		display: inline-block;
+		height: auto;
 		width: 50%;
 		margin: 0 auto;
 		padding: 1em;

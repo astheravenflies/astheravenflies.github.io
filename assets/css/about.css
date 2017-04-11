@@ -238,12 +238,13 @@ a {
 	left: 50%;
 	width: 200;
 	margin: 2.8em auto;
-	z-index: 20;
+	z-index: 100;
 }
 
 .map-center {
 	position: relative;
 	left: -50%;
+	z-index: 100;
 }
 
 #map-links {

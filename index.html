@@ -7,24 +7,32 @@
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <meta property="og:image" content="http://astheravenfli.es/img/thumb/GOPR2644-1920-web.jpg" />
 	
-	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon/favicon.ico">
-
-    <style>
-        body { margin:0; padding:0; }
-        #map { position:absolute; top:0; bottom:0; width:100%; z-index:1}
-    </style>
-
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css' rel='stylesheet' />    
-    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+	
+<!-- LEAFLET FOR KML -->
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+	
+<style>
+	body { margin:0; padding:0; }
+	.map { 
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		-webkit-animation: fadein 1.5s;
+		-moz-animation: fadein 1.5s;
+		-ms-animation: fadein 1.5s;
+		-o-animation: fadein 1.5s;
+		animation: fadein 1.5s;
+	}
+</style>
 
     <link rel="stylesheet" href="assets/css/about.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Open+Sans:300,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     
-    <link rel="stylesheet" href="../../assets/css/about.css" />
-    
+  
 </head>
 
 
@@ -36,56 +44,35 @@
 
 <!-- NAVIGATION -->
 
-<nav class="navbar navbar-toggleable-sm">
-	<div class="container">
-		<ul class="nav navbar-nav navbar-left">
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="../about">About</a>
-				<ul class="dropdown-menu light">
-					<li><a class="nav-link" href="../team">Team</a></li>
-					<li><a class="nav-link" href="../partners">Partners</a></li>
-					<li><a class="nav-link" href="../supporters">Supporters</a></li>
-				</ul>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="../journal">Journal</a>
-			</li>
-		</ul>
-
-		<ul class="nav navbar-nav-logo white-bg mx-auto">
-			<li class="nav item"><a class="nav-link" href="../"><img src="../img/nav/atrf-logo-200-web.png"></a></li>
-		</ul>
-
-		<ul class="nav navbar-nav navbar-right">
-			<li class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" href="../media">Media</a>
-				<ul class="dropdown-menu">
-					<a class="nav-link" href="../press-kit">Press Kit</a>
-				</ul>
-			</li>
-			<li class="nav-item active">
-				<a class="nav-link" href="../contact">Contact</a>
-			</li>
-		</ul>
-
-	</div>
-</nav>
-
-<div id="about-box"><p><a href="https://notes.chairsandtables.org/what-is-this-map-86842e2d38dd#.nq8v8875h" target="_blank">What is this map?</a></p></div>
+<div id="map-header"><div class="map-center">
+	<a href="./"><img src="../img/nav/atrf-logo-200-web.png"></a>
+</div></div>
 	
+<div id="map-links">
+ 	<ul>
+		<li><a href="./journal" target="_blank">Journal</a></li>
+		<li><a href="./about">About</a></li>
+	</ul>	
+</div>
+
 <!-- MAP -->
 	
-<div id="map">
-	<script>
-		mapboxgl.accessToken = 'pk.eyJ1IjoiYXNhZGNoIiwiYSI6Ikw0TTRNTjgifQ.iOyNBAGQZntQ8yDmUnfxQQ';
-		var map = new mapboxgl.Map({
-			container: 'map', // container id
-			style: 'mapbox://styles/asadch/cizcqhe0u008m2sqi37yg5hrw', //stylesheet location
-			center: [-100.469, 64], // starting position
-			zoom: 2.9 // starting zoom
-		});
-	</script>
-</div>
+<div id='map-leaflet' class='map'></div>
+	
+<script>
+	
+L.mapbox.accessToken = 'pk.eyJ1Ijoiam9uYXRob25yZWVkIiwiYSI6ImNpc2c3Zjc4ZTAxcGIyeXZvbnV3eWNmMzIifQ.DUHfFfoG0m24UGVe-q7w6A';
+var mapLeaflet = L.mapbox.map('map-leaflet', 'mapbox.light')
+.setView([51, -75], 4.5);
+
+omnivore.kml('./assets/map/atrf.kml').addTo(mapLeaflet);
+
+L.marker([47.516659, -52.633484]).addTo(mapLeaflet);
+L.marker([48.411888, -123.294091]).addTo(mapLeaflet);
+
+mapLeaflet.scrollWheelZoom.disable();
+
+</script>
 
 </body>
 </html>

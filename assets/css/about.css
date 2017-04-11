@@ -128,7 +128,7 @@ a {
 
 		.navbar ul.navbar-left {
 			position: relative;
-			right: -10%;
+			right: -9%;
 			border-top-left-radius: 5px;
 			border-bottom-left-radius: 5px;
 		}
@@ -159,6 +159,7 @@ a {
 
 			ul.white-bg img {
 				margin-top: -45px;
+				margin-left: -32px;
 			}
 
 		.navbar ul li {
@@ -231,31 +232,59 @@ a {
 
 /* MAP OVERLAY */
 
-#about-box {
-	display: block;
-	position: fixed;
+#map-header {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 200;
+	margin: 2.8em auto;
+	z-index: 20;
+}
+
+.map-center {
+	position: relative;
+	left: -50%;
+}
+
+#map-links {
+	position: absolute;
+	bottom: 2.4em;
 	right: 1em;
-	bottom: 2em;
-	height: 2em;
-	padding: 0.5em;
-	background-color: #ffffff;
-	border-radius: 5px;
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald';
+	font-size: 1em;
+	text-transform: uppercase;
+	line-height: 1;
 	z-index: 100;
 }
 
-	#about-box p {
-		font-family: 'Oswald';
-		font-size: 1em;
-		text-transform: uppercase;
+#map-links ul {
+	display: inline;
+	padding: 0;
+}
+
+	#map-links ul li {
+	    float:right;
+    	clear: right;
+		margin: 0.2em 0;
+		padding: 0.5em;
+	background-color: #ffffff;
+	border-radius: 5px;
+		text-align: center;
 	}
 
-		#about-box p a {
+#map-links ul li:hover {
+	background-color: #404040;
+}
+
+		#map-links ul li a {
 			color: #202020;
 			text-decoration: none;
 		}
 
-			#about-box p a:hover {
-				color: #cd3333;
+			#map-links ul li:hover a {
+				color: #ffffff;
 			}
 
 /* FONT AWESOME */

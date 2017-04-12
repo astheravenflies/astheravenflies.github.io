@@ -728,10 +728,10 @@ label {
 
 	#page p {
 		position: relative;
-		margin: 0.8em auto;
+		margin: 1em auto;
 		width: 60%;
 		font-family: 'Source Sans Pro';
-		font-size: 1.15em;
+		font-size: 1.2em;
 		font-weight: 300;
 		line-height: 1.2;
 		color: #202020;
@@ -745,7 +745,7 @@ label {
 }
 
 		#page p.margin-top-1 {
-			margin-top: 1em;
+			margin-top: 1.4em;
 		}
 
 		#page p.margin-bottom-3 {
@@ -1053,7 +1053,7 @@ label {
 		#page ul.fa-ul li {
 			width: 100%;
 			padding-left: 0.75em;
-			font-size: 1em;
+			font-size: 1.08em;
 			font-weight: 300;
 			line-height: 1.4;
 		}

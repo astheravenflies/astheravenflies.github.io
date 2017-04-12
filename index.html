@@ -65,7 +65,7 @@ L.mapbox.accessToken = 'pk.eyJ1Ijoiam9uYXRob25yZWVkIiwiYSI6ImNpc2c3Zjc4ZTAxcGIye
 var mapLeaflet = L.mapbox.map('map-leaflet', 'mapbox.light')
 .setView([51, -75], 4.5);
 
-omnivore.kml('./assets/map/atrf.kml').addTo(mapLeaflet);
+omnivore.kml('./assets/map/atlantic-canada-1.kml.xml').addTo(mapLeaflet);
 	
 var myLayer = L.mapbox.featureLayer().addTo(mapLeaflet);
 
@@ -92,7 +92,7 @@ var geojson = [
     properties: {
       icon: {
         className: 'marker marker-black', // class name to style
-        html: '&#9733;', // add content inside the marker
+        // html: '&#9733;', add content inside the marker
         iconSize: null // size of icon, use null to set the size in CSS
       }
     }

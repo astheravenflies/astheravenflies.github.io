@@ -66,12 +66,47 @@ var mapLeaflet = L.mapbox.map('map-leaflet', 'mapbox.light')
 .setView([51, -75], 4.5);
 
 omnivore.kml('./assets/map/atrf.kml').addTo(mapLeaflet);
+	
+var myLayer = L.mapbox.featureLayer().addTo(mapLeaflet);
 
-L.marker([47.516659, -52.633484]).addTo(mapLeaflet);
-L.marker([48.411888, -123.294091]).addTo(mapLeaflet);
+var geojson = [
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-52.620334, 47.523855]
+    },
+    properties: {
+      icon: {
+        className: 'marker marker-black', // class name to style
+        iconSize: null // size of icon, use null to set the size in CSS
+      }
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-123.293969, 48.411721]
+    },
+    properties: {
+      icon: {
+        className: 'marker marker-black', // class name to style
+        html: '&#9733;', // add content inside the marker
+        iconSize: null // size of icon, use null to set the size in CSS
+      }
+    }
+  }
+];
+myLayer.on('layeradd', function(e) {
+  var marker = e.layer,
+    feature = marker.feature;
+  marker.setIcon(L.divIcon(feature.properties.icon));
+});
+myLayer.setGeoJSON(geojson);
 
-mapLeaflet.scrollWheelZoom.disable();
-
+mapLeaflet.scrollWheelZoom.isEnabled();
+	
 </script>
 
 </body>

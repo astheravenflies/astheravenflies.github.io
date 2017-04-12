@@ -288,6 +288,20 @@ a {
 				color: #ffffff;
 			}
 
+/* MAP EMBED */
+
+.marker {
+	margin-top: -45px;
+	margin-left: -14px;
+	width: 28px;
+	height: 45px;
+	text-align: center;
+}
+
+.marker-black {
+	background-image: url(../map/marker-grey.png);
+}
+
 /* FONT AWESOME */
 
 ul.icons li {

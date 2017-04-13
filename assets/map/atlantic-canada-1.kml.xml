@@ -9,7 +9,7 @@
       </LineStyle>
 	  </Style>
     <Placemark>
-      <name>Atlantic Canada</name><styleUrl id="black"></styleUrl>
+      <name>Atlantic Canada</name><styleUrl>#black</styleUrl>
       <LineString>
         <tessellate>1</tessellate>
         <coordinates>

@@ -2,9 +2,14 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
     <name>atlantic-canada-1</name>
+	  <Style id="black">
+      <LineStyle>
+        <color>7f00ffff</color>
+        <width>4</width>
+      </LineStyle>
+	  </Style>
     <Placemark>
-      <name>Atlantic Canada</name>
-      <styleUrl>kml-styles.kml#red</styleUrl>
+      <name>Atlantic Canada</name><styleUrl id="black"></styleUrl>
       <LineString>
         <tessellate>1</tessellate>
         <coordinates>

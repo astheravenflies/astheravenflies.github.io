@@ -920,6 +920,14 @@ ul.margin-2 {
 	margin: 2em auto;
 }
 
+ul.icons .white {
+	color: #fff;
+}
+
+ul.icons .white:hover {
+	color: #202020;
+}
+
 	.icon {
 		position: relative;
 		text-decoration: none;
@@ -1504,7 +1512,7 @@ label {
 				transform: skewY(3deg);
 			}
 
-			#page .bg.team-deg .asad {
+			#page .asad {
 				display: block;
 				position: relative;
 				max-width: 1920px;
@@ -1514,7 +1522,7 @@ label {
 				background-size: cover;
 				background-position: center;
 				overflow: hidden;
-				margin: -2.25em auto;
+				margin: 1em auto;
 			}
 
 		#page .bg.team-neg-deg {
@@ -1540,7 +1548,7 @@ label {
 				transform: skewY(-3deg);
 			}
 
-			#page .bg.team-neg-deg .jonathon {
+			#page .jonathon {
 				display: block;
 				position: relative;
 				max-width: 1920px;
@@ -1550,7 +1558,7 @@ label {
 				background-size: cover;
 				background-position: center;
 				overflow: hidden;
-				margin: -2.25em auto;
+				margin: 1em auto;
 			}
 
 		#page .bg.red {
@@ -1584,7 +1592,7 @@ label {
 #page .team-desc {
 	position: relative;
 	width: 100%;
-	margin: -2em auto -1em auto;
+	margin: -9em auto -1em auto;
 	z-index: 3;
 }
 

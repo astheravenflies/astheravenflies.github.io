@@ -615,6 +615,17 @@ nav {
 	font-size: 1em;
 }
 
+	#footer #mc_embed_signup .map-layer {
+		clear:left;
+		position: fixed;
+		bottom: 0;
+		width: 25.5em;
+		margin: 1em auto;
+		padding: 1em 0;
+		font-family: 'Inconsolata';
+		font-size: 1em;
+	}
+
 	#footer #mc_embed_signup form {
 		padding: 0em 0;
 		text-align: center;
@@ -880,6 +891,10 @@ nav {
 			#map-links ul li:hover a {
 				color: #202020;
 			}
+
+#map-subscribe {
+	z-index: 100;
+}
 
 /* MAP EMBED */
 

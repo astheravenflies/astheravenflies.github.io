@@ -808,7 +808,7 @@ nav {
 		display: inline-block;
 		font-family: 'Inconsolata';
 		text-transform: uppercase;
-		font-weight: 700;
+		font-weight: 400;
 	}
 
 		#map-header ul li a {
@@ -896,20 +896,6 @@ nav {
 	z-index: 100;
 }
 
-/* MAP EMBED */
-
-.marker {
-	margin-top: -45px;
-	margin-left: -14px;
-	width: 28px;
-	height: 45px;
-	text-align: center;
-}
-
-.marker-black {
-	background-image: url(../map/marker-grey.png);
-}
-
 /* FONT AWESOME */
 
 ul.icons li {
@@ -977,6 +963,43 @@ label {
 	font-size: 0.9em;
 	font-weight: 700;
 	margin: 0 0 2em 0;
+}
+
+/* MAP STYLES */
+
+.leaflet-popup-content-wrapper {
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	max-width: 300;
+}
+
+.leaflet-popup-content {
+	margin: 0;
+	padding: 1em;
+}
+
+.leaflet-popup-content h3 {
+	font-family: 'Inconsolata';
+	font-size: 1.2em;
+	text-transform: uppercase;
+	color: #202020;
+}
+
+.leaflet-popup-content h3 a {
+	color: #202020;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.leaflet-popup-content h3 a:hover {
+	color: #cd3333;
+}
+
+.leaflet-popup-content p {
+	font-family: 'Inconsolata';
+	font-size: 1.2em;
+	color: #202020;
 }
 
 /* BANNER */

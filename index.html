@@ -12,7 +12,11 @@
 	
 <!-- LEAFLET FOR KML -->
 <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+<link href='./assets/map/MarkerCluster.Default.css' rel='stylesheet' />
 	
+
 <style>
 	body { margin:0; padding:0; }
 	.map { 
@@ -29,7 +33,7 @@
 </style>
 
     <link rel="stylesheet" href="assets/css/about.css" />
-    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
 <!-- GOOGLE ANALYTICS -->
@@ -88,13 +92,32 @@ L.mapbox.accessToken = 'pk.eyJ1Ijoiam9uYXRob25yZWVkIiwiYSI6ImNpc2c3Zjc4ZTAxcGIye
 var mapLeaflet = L.mapbox.map('map-leaflet', 'mapbox.light')
 .setView([51, -75], 4.5);
 
-var runLayer = omnivore.kml('./assets/map/atlantic-canada-1.kml.xml')
-    .on('ready', function() {
-        map.fitBounds(runLayer.getBounds());
-    })
-    .addTo(mapLeaflet);
+
+var route = omnivore.kml('./assets/map/atlantic-canada-1.kml.xml', null, L.geoJson(null, {
+	style: function(layer) {
+		return {
+			color: '#000',
+			weight: 4
+		};
+	}
+}));
+
 	
-var myLayer = L.mapbox.featureLayer().addTo(mapLeaflet);
+route.on('ready', function() {
+        mapLeaflet.fitBounds(route.getBounds());
+    })
+route.addTo(mapLeaflet);
+	
+var markers = L.mapbox.featureLayer();
+
+var markerTypes = {
+	boring: {
+		iconUrl: './assets/map/marker-grey.png',
+		iconSize: [28, 45],
+		iconAnchor: [14, 45],
+		popupAnchor: [0, -45]
+	},
+};
 
 var geojson = [
 {
@@ -104,10 +127,21 @@ var geojson = [
   		coordinates: [-52.620334, 47.523855]
 	},
 	properties: {
-  		icon: {
-		className: 'marker marker-black', // class name to style
-		iconSize: null // size of icon, use null to set the size in CSS
-		}
+  		icon: markerTypes.boring,
+		content: ("<h3>hello!</h3>\
+				  <p>this is some stuff and more and more and more</p>")
+	}
+},
+{
+	type: 'Feature',
+	geometry: {
+  		type: 'Point',
+  		coordinates: [-53, 47.523855]
+	},
+	properties: {
+  		icon: markerTypes.boring,
+		content: ("<h3>hello!</h3>\
+				  <p>this is some stuff and more and more and more</p>")
 	}
 },
 {
@@ -117,11 +151,7 @@ var geojson = [
 		coordinates: [-123.293969, 48.411721]
 	},
 	properties: {
-  		icon: {
-		className: 'marker marker-black', // class name to style
-		// html: '&#9733;', add content inside the marker
-		iconSize: null // size of icon, use null to set the size in CSS
-  		}
+  		icon: markerTypes.boring
 	}
 },
 {
@@ -131,23 +161,30 @@ var geojson = [
 		coordinates: [-78.959267, 44.762120]
 	},
 	properties: {
-  		icon: {
-		className: 'marker marker-black', // class name to style
-		// html: '&#9733;', add content inside the marker
-		iconSize: null // size of icon, use null to set the size in CSS
-  		}
+  		icon: markerTypes.boring,
+		content: ("<h3><a href='http://astheravenfli.es/journal/2017/04/14/how-my-home-became-a-wasteland/'>How My Home Became a Wasteland &rarr;</a></h3><p>About logging, fires, and the importance of learning local history.</p><img src='http://astheravenfli.es/journal/img/2017/04/04141701-2000-web.jpg' width='100%'>")
 	}
 }
 ];
-myLayer.on('layeradd', function(e) {
+
+markers.on('layeradd', function(e) {
   var marker = e.layer,
     feature = marker.feature;
-  marker.setIcon(L.divIcon(feature.properties.icon));
-});
-myLayer.setGeoJSON(geojson);
+  marker.setIcon(L.icon(feature.properties.icon));
+  marker.bindPopup(feature.properties.content, {
+	  maxWidth: 400
+  })
 
-mapLeaflet.scrollWheelZoom.isEnabled();
-	
+});
+markers.setGeoJSON(geojson);
+
+var clustered = new L.MarkerClusterGroup({
+	showCoverageOnHover: false
+});
+clustered.addLayer(markers);
+
+clustered.addTo(mapLeaflet);
+
 </script>
 
 </body>

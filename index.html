@@ -97,33 +97,47 @@ var runLayer = omnivore.kml('./assets/map/atlantic-canada-1.kml.xml')
 var myLayer = L.mapbox.featureLayer().addTo(mapLeaflet);
 
 var geojson = [
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-52.620334, 47.523855]
-    },
-    properties: {
-      icon: {
-        className: 'marker marker-black', // class name to style
-        iconSize: null // size of icon, use null to set the size in CSS
-      }
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-123.293969, 48.411721]
-    },
-    properties: {
-      icon: {
-        className: 'marker marker-black', // class name to style
-        // html: '&#9733;', add content inside the marker
-        iconSize: null // size of icon, use null to set the size in CSS
-      }
-    }
-  }
+{
+	type: 'Feature',
+	geometry: {
+  		type: 'Point',
+  		coordinates: [-52.620334, 47.523855]
+	},
+	properties: {
+  		icon: {
+		className: 'marker marker-black', // class name to style
+		iconSize: null // size of icon, use null to set the size in CSS
+		}
+	}
+},
+{
+	type: 'Feature',
+	geometry: {
+ 		type: 'Point',
+		coordinates: [-123.293969, 48.411721]
+	},
+	properties: {
+  		icon: {
+		className: 'marker marker-black', // class name to style
+		// html: '&#9733;', add content inside the marker
+		iconSize: null // size of icon, use null to set the size in CSS
+  		}
+	}
+},
+{
+	type: 'Feature',
+	geometry: {
+ 		type: 'Point',
+		coordinates: [-78.959267, 44.762120]
+	},
+	properties: {
+  		icon: {
+		className: 'marker marker-black', // class name to style
+		// html: '&#9733;', add content inside the marker
+		iconSize: null // size of icon, use null to set the size in CSS
+  		}
+	}
+}
 ];
 myLayer.on('layeradd', function(e) {
   var marker = e.layer,

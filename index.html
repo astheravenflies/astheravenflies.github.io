@@ -66,7 +66,7 @@ ga('send', 'pageview');
 </div></div>
 
 <div id="map-logo">
-	<a href="./"><img src="../img/nav/atrf-logo-220-web.png"></a>
+	<a href="./"><img src="../img/nav/atrf-logo-white-220-web.png"></a>
 	</div>
 	
 <div id="footer">
@@ -93,10 +93,10 @@ var mapLeaflet = L.mapbox.map('map-leaflet', 'mapbox.light')
 .setView([51, -75], 4.5);
 
 
-var route = omnivore.kml('./assets/map/atlantic-canada-1.kml.xml', null, L.geoJson(null, {
+var route = omnivore.kml('./assets/map/atrf-route.xml', null, L.geoJson(null, {
 	style: function(layer) {
 		return {
-			color: '#000',
+			color: '#202020',
 			weight: 4
 		};
 	}
@@ -136,35 +136,13 @@ var geojson = [
 	type: 'Feature',
 	geometry: {
   		type: 'Point',
-  		coordinates: [-53, 47.523855]
+  		coordinates: [-52.714333, 47.556824]
 	},
 	properties: {
   		icon: markerTypes.boring,
-		content: ("<h3>hello!</h3>\
-				  <p>this is some stuff and more and more and more</p>")
+		content: ("<h3><a href='http://astheravenfli.es/journal/2017/04/14/how-my-home-became-a-wasteland/' target='blank'>How My Home Became a Wasteland &rarr;</a></h3><p>About logging, fires, and the importance of learning local history.</p><img src='http://astheravenfli.es/journal/img/2017/04/04141701-2000-web.jpg' width='100%'>")
 	}
 },
-{
-	type: 'Feature',
-	geometry: {
- 		type: 'Point',
-		coordinates: [-123.293969, 48.411721]
-	},
-	properties: {
-  		icon: markerTypes.boring
-	}
-},
-{
-	type: 'Feature',
-	geometry: {
- 		type: 'Point',
-		coordinates: [-78.959267, 44.762120]
-	},
-	properties: {
-  		icon: markerTypes.boring,
-		content: ("<h3><a href='http://astheravenfli.es/journal/2017/04/14/how-my-home-became-a-wasteland/'>How My Home Became a Wasteland &rarr;</a></h3><p>About logging, fires, and the importance of learning local history.</p><img src='http://astheravenfli.es/journal/img/2017/04/04141701-2000-web.jpg' width='100%'>")
-	}
-}
 ];
 
 markers.on('layeradd', function(e) {

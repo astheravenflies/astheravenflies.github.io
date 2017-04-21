@@ -12,8 +12,9 @@
 	
 <!-- LEAFLET FOR KML -->
 <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+<!-- LEAFLET MARKERCLUSTER -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.4/leaflet.markercluster.js'></script>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.0.4/MarkerCluster.css' rel='stylesheet' />
 <link href='./assets/map/MarkerCluster.Default.css' rel='stylesheet' />
 	
 
@@ -156,14 +157,12 @@ markers.on('layeradd', function(e) {
 });
 markers.setGeoJSON(geojson);
 
-// var clustered = new L.MarkerClusterGroup({
-	// showCoverageOnHover: false
-//});
-// clustered.addLayer(markers);
+var clustered = new L.MarkerClusterGroup({
+	showCoverageOnHover: false
+});
+clustered.addLayer(markers);
 
-//clustered.addTo(mapLeaflet);
-	
-markers.addTo(mapLeaflet);
+clustered.addTo(mapLeaflet);
 
 </script>
 

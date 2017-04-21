@@ -744,11 +744,17 @@ nav {
 @media (max-width: 768px) {
 
 	#footer #mc_embed_signup {
+		position: relative;
 		width: 90%;
+	}
+	
+	#footer #mc_embed_signup .map-layer {
+		width: 90%;
+		margin: 0 auto;
 	}
 
 	#footer #mc_embed_signup input.email {
-		width:100%;
+		width:80%;
 		margin-bottom: 0 auto;
 		padding: 0.3em;
 		text-align: center;
@@ -757,7 +763,7 @@ nav {
 
 	#footer #mc_embed_signup .clear {
 		display: block;
-		width: 100%;
+		width: 80%;
 		margin: 0 auto;
 		padding: 0.3em 0;
 	}

@@ -156,12 +156,14 @@ markers.on('layeradd', function(e) {
 });
 markers.setGeoJSON(geojson);
 
-var clustered = new L.MarkerClusterGroup({
-	showCoverageOnHover: false
-});
-clustered.addLayer(markers);
+// var clustered = new L.MarkerClusterGroup({
+	// showCoverageOnHover: false
+//});
+// clustered.addLayer(markers);
 
-clustered.addTo(mapLeaflet);
+//clustered.addTo(mapLeaflet);
+	
+markers.addTo(mapLeaflet);
 
 </script>
 

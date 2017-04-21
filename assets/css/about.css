@@ -835,6 +835,14 @@ nav {
 				border-top: 4px #202020 solid;
 			}
 
+		@media (max-width: 768px) {
+
+			#map-header ul li.map-li {
+				display: none;
+			}
+
+		}
+
 #map-links {
 	position: absolute;
 	top: 0.7em;
